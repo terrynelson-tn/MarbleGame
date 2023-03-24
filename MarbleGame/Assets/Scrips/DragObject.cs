@@ -11,7 +11,6 @@ public class DragObject : MonoBehaviour
     private float mZCoord;
     [SerializeField] private Vector3 gridSize = new Vector3(5, 5, 5);
     Vector3 mouse;
-    int count = 0;
     // Used to tell if the object is in a movable state
     bool canMove = false;
     // Used to prevent object from snapping to mouse pos. when move key is released
