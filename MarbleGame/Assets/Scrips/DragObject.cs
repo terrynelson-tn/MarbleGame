@@ -43,9 +43,6 @@ public class DragObject : MonoBehaviour
         //store offset = gameobject world pos - mouse world pos
         mOffset = gameObject.transform.position - GetMouseWorldPos();
     }
-
-
-
     private Vector3 GetMouseWorldPos()
     {
         // pixel to world transform
