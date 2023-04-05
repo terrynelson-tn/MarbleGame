@@ -7,16 +7,12 @@ using UnityEngine;
 public class FallingMarbles : MonoBehaviour
 {
     public GameObject MarblePrefab;
-    private GameObject Marble;
     [SerializeField] private Material[] randomMaterial;
-    List<GameObject> totalMarbles = new List<GameObject>();
+    ArrayList totalMarbles = new ArrayList();
+    private GameObject newMarble;
 
     private float time = 0.0f;
 
-    void Awake()
-    {
-        Marble = Instantiate(MarblePrefab);
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,27 +20,20 @@ public class FallingMarbles : MonoBehaviour
         time += Time.deltaTime;
         Vector3 randomSpawnPosition = new(Random.Range(-10, 11), transform.position.y, Random.Range(-5, 11));
 
-        if (time > 0.2f)
+        if (time > 0.1f)
         {
-            totalMarbles.Add(Instantiate(Marble, randomSpawnPosition, Quaternion.identity) as GameObject);
-            foreach (GameObject Marble in totalMarbles)
-            {
-                StartCoroutine(MarbleTime());
-            }
+            newMarble = Instantiate(MarblePrefab, randomSpawnPosition, Quaternion.identity);
+            totalMarbles.Add(newMarble);
+            StartCoroutine(MarbleTime());
             time = 0.0f;
         }
+
     }
-
-
-
 
     IEnumerator MarbleTime()
     {
-        Marble.GetComponent<Renderer>().material = randomMaterial[Random.Range(0, randomMaterial.Length)];
+        MarblePrefab.GetComponent<Renderer>().material = randomMaterial[Random.Range(0, randomMaterial.Length)];
+        Destroy(newMarble, 2f);
         yield return new WaitForSeconds(3f);
-        if (totalMarbles.Count > 0)
-        {
-            totalMarbles.RemoveAt(0);
-        }
     }
 }
