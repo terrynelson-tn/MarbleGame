@@ -69,7 +69,14 @@ public class SaveSlotsMenu : Menu
     {
         DataPersistenceManager.Instance.SaveGame();
 
-        SceneManager.LoadSceneAsync("Level 1");
+        if (isLoadingGame)
+        {
+            SceneManager.LoadSceneAsync("Level 1");
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync("Marble Selection");
+        }
     }
 
 
