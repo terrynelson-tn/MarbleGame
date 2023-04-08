@@ -1,16 +1,17 @@
 //Final Project --- GameData.cs by Sebastian Ulloa
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [System.Serializable]
+
 public class GameData
 {
     public long lastUpdated;
+    public bool Level1;
+
+    public int MarbleVariant;
 
     public GameData()
     {
-        //ADD GAME DATA
+        MarbleVariant = 0;
+        Level1 = false;
     }
 }

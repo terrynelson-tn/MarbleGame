@@ -1663,6 +1663,59 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &728631548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728631550}
+  - component: {fileID: 728631549}
+  m_Layer: 0
+  m_Name: MarbleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &728631549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728631548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9d10f1bd06c2c4fb82d397aca61536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerMarble: {fileID: 1602033058}
+  marbleMaterials:
+  - {fileID: 2100000, guid: fc1bdd913e0ded349ab92f2ebfff1c7a, type: 2}
+  - {fileID: 2100000, guid: c9ece29631bf5e741812a1c03a15a515, type: 2}
+  - {fileID: 2100000, guid: 998bfd8eb44fcf644b7a66765444d60e, type: 2}
+  - {fileID: 2100000, guid: d021a1a09d243984289367b43d2d4fb2, type: 2}
+  - {fileID: 2100000, guid: 9a6b8766a7adedc418c224bb71ac1e11, type: 2}
+  - {fileID: 2100000, guid: c3b29dc82ef78384ca5fc5bc7653a5f1, type: 2}
+  SelectedMarble: 0
+--- !u!4 &728631550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728631548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.4212885, y: 13.180809, z: 17.831818}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793812982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,6 +2558,11 @@ PrefabInstance:
 --- !u!4 &1602033057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2753061694937953095, guid: 3ea51a4cdec489b409d50df643ac0cf7, type: 3}
+  m_PrefabInstance: {fileID: 1602033056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1602033058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2753061694937953091, guid: 3ea51a4cdec489b409d50df643ac0cf7, type: 3}
   m_PrefabInstance: {fileID: 1602033056}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1638664050
