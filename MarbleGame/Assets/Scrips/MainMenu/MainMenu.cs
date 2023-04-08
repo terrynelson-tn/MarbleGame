@@ -54,8 +54,8 @@ public class MainMenu : Menu
         DisableMenuButtons();
         DataPersistenceManager.Instance.SaveGame();
 
+        //REPLACE WITH FUNCTIONAL MULTI-LEVEL LOADER
         SceneManager.LoadSceneAsync("Level 1");
-        
     }
 
     public void OnExitGameClicked()
