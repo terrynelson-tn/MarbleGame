@@ -1,33 +1,22 @@
 using UnityEngine;
+using Cinemachine;
 
 public class FollowBall : MonoBehaviour
 {
-    public Transform ballTransform;
-    public float cameraHeight = 5f;
-    public float cameraDistance = 10f;
-
-    private Vector3 offset;
+    public float smoothness;
+    public Transform targetObject;
+    private Vector3 initalOffset;
+    private Vector3 cameraPosition;
 
     void Start()
     {
-        offset = transform.position - ballTransform.position;
+        initalOffset = transform.position - targetObject.position;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
-        // Update camera position to follow ball
-        transform.position = ballTransform.position + offset;
-
-        // Keep camera level with horizon
-        Vector3 cameraPosition = transform.position;
-        cameraPosition.y = cameraHeight;
-        transform.position = cameraPosition;
-
-        // Keep camera distance from ball
-        transform.LookAt(ballTransform);
-        transform.position -= transform.forward * cameraDistance;
-
-        // Prevent camera roll when ball rolls
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        cameraPosition = targetObject.position + initalOffset;
+        transform.position = Vector3.Lerp(transform.position, cameraPosition, smoothness * Time.fixedDeltaTime);
     }
 }
+

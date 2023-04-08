@@ -61,6 +61,14 @@ public class DragObject : MonoBehaviour
         {
             return;
         }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            this.gameObject.transform.Rotate(0, 5, 0);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            this.gameObject.transform.Rotate(0, -5, 0);
+        }
         var position = new Vector3(0, 0, 0);
         if (Input.GetKey(KeyCode.X))
         {
