@@ -13,9 +13,10 @@ public class ButtonScripts : MonoBehaviour
     public GameObject marble;
     public GameObject spawn;
     Vector3 spawnPos;
-    bool bluePressed = false;
+    bool horizPressed = false;
+    bool vertPressed = false;
     bool canPress = true;
-    public GameObject[] blueObstacle;
+    public GameObject[] Obstacles;
 
 
     void Awake()
@@ -99,36 +100,38 @@ public class ButtonScripts : MonoBehaviour
        GameObject newSpawn = Instantiate(marble, spawnPos, marble.transform.rotation);
     }
 
-    public void BlueObstacles()
+    public void moveHorizontal()
     {
         float lerpDuration = 3;
-        if(!bluePressed && canPress)
+        if(!horizPressed && canPress)
         {
             canPress = false;
-            foreach (GameObject obj in blueObstacle) {
+            foreach (GameObject obj in Obstacles) {
                 Vector3 startPos = obj.transform.position;
                 Vector3 newPos = startPos;
                 newPos.x += 5;
-                StartCoroutine(Lerp(obj, startPos, newPos, lerpDuration));
+                StartCoroutine(LerpHoriz(obj, startPos, newPos, lerpDuration));
             }
-            bluePressed = !bluePressed;
+            horizPressed = !horizPressed;
+            canPress = true;
         }
         else if (canPress)
         {
             canPress = false;
-            foreach (GameObject obj in blueObstacle)
+            foreach (GameObject obj in Obstacles)
             {
                 Vector3 startPos = obj.transform.position;
                 Vector3 newPos = startPos;
                 newPos.x -= 5;
-                StartCoroutine(Lerp(obj, startPos, newPos, lerpDuration));
+                StartCoroutine(LerpHoriz(obj, startPos, newPos, lerpDuration));
             }
-            bluePressed = !bluePressed;
+            horizPressed = !horizPressed;
+            canPress = true;
         }
 
     }
 
-    IEnumerator Lerp(GameObject obj, Vector3 startPos, Vector3 newPos, float duration)
+    IEnumerator LerpHoriz(GameObject obj, Vector3 startPos, Vector3 newPos, float duration)
     {
         float timeElapsed = 0;
         while (timeElapsed < duration)
@@ -138,6 +141,50 @@ public class ButtonScripts : MonoBehaviour
             yield return null;
         }
         obj.transform.position = newPos;
-        canPress = true;
+       
+    }
+
+    public void moveVertical()
+    {
+        float lerpDuration = 3;
+        if (!vertPressed && canPress)
+        {
+            canPress = false;
+            foreach (GameObject obj in Obstacles)
+            {
+                Vector3 startPos = obj.transform.position;
+                Vector3 newPos = startPos;
+                newPos.y += 5;
+                StartCoroutine(LerpVert(obj, startPos, newPos, lerpDuration));
+            }
+            vertPressed = !vertPressed;
+            canPress = true;
+        }
+        else if (canPress)
+        {
+            canPress = false;
+            foreach (GameObject obj in Obstacles)
+            {
+                Vector3 startPos = obj.transform.position;
+                Vector3 newPos = startPos;
+                newPos.y -= 5;
+                StartCoroutine(LerpVert(obj, startPos, newPos, lerpDuration));
+            }
+            vertPressed = !vertPressed;
+            canPress = true;
+        }
+
+    }
+
+    IEnumerator LerpVert(GameObject obj, Vector3 startPos, Vector3 newPos, float duration)
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < duration)
+        {
+            obj.transform.position = Vector3.Lerp(startPos, newPos, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        obj.transform.position = newPos;
     }
 }
