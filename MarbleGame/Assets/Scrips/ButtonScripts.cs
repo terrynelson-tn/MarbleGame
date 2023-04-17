@@ -6,7 +6,8 @@ using Cinemachine;
 
 public class ButtonScripts : MonoBehaviour
 {
-    Button yourButton;
+    public Button yourButton;
+    public Button yourButton2;
     public GameObject sampleObject;
     public KeyCode triggerKey;
     public Camera buildCam;
@@ -15,7 +16,6 @@ public class ButtonScripts : MonoBehaviour
     Vector3 spawnPos;
     bool horizPressed = false;
     bool vertPressed = false;
-    bool canPress = true;
     public GameObject[] Obstacles;
 
 
@@ -103,9 +103,10 @@ public class ButtonScripts : MonoBehaviour
     public void moveHorizontal()
     {
         float lerpDuration = 3;
-        if(!horizPressed && canPress)
+        if(!horizPressed)
         {
-            canPress = false;
+            yourButton.interactable = false;
+            yourButton2.interactable = false;
             foreach (GameObject obj in Obstacles) {
                 Vector3 startPos = obj.transform.position;
                 Vector3 newPos = startPos;
@@ -113,11 +114,11 @@ public class ButtonScripts : MonoBehaviour
                 StartCoroutine(LerpHoriz(obj, startPos, newPos, lerpDuration));
             }
             horizPressed = !horizPressed;
-            canPress = true;
         }
-        else if (canPress)
+        else
         {
-            canPress = false;
+            yourButton.interactable = false;
+            yourButton2.interactable = false;
             foreach (GameObject obj in Obstacles)
             {
                 Vector3 startPos = obj.transform.position;
@@ -126,7 +127,6 @@ public class ButtonScripts : MonoBehaviour
                 StartCoroutine(LerpHoriz(obj, startPos, newPos, lerpDuration));
             }
             horizPressed = !horizPressed;
-            canPress = true;
         }
 
     }
@@ -141,37 +141,44 @@ public class ButtonScripts : MonoBehaviour
             yield return null;
         }
         obj.transform.position = newPos;
-       
+        yourButton.interactable = true;
+        yourButton2.interactable = true;
+
     }
 
     public void moveVertical()
     {
         float lerpDuration = 3;
-        if (!vertPressed && canPress)
+        if (!vertPressed)
         {
-            canPress = false;
+            yourButton.interactable = false;
+            yourButton2.interactable = false;
             foreach (GameObject obj in Obstacles)
             {
+                yourButton.interactable = false;
+                yourButton2.interactable = false;
                 Vector3 startPos = obj.transform.position;
                 Vector3 newPos = startPos;
                 newPos.y += 5;
                 StartCoroutine(LerpVert(obj, startPos, newPos, lerpDuration));
             }
             vertPressed = !vertPressed;
-            canPress = true;
         }
-        else if (canPress)
+        else
         {
-            canPress = false;
+            yourButton.interactable = false;
+            yourButton2.interactable = false;
             foreach (GameObject obj in Obstacles)
             {
+                yourButton.interactable = false;
+                yourButton2.interactable = false;
                 Vector3 startPos = obj.transform.position;
                 Vector3 newPos = startPos;
                 newPos.y -= 5;
                 StartCoroutine(LerpVert(obj, startPos, newPos, lerpDuration));
             }
             vertPressed = !vertPressed;
-            canPress = true;
+           
         }
 
     }
@@ -186,5 +193,7 @@ public class ButtonScripts : MonoBehaviour
             yield return null;
         }
         obj.transform.position = newPos;
+        yourButton.interactable = true;
+        yourButton2.interactable = true;
     }
 }
