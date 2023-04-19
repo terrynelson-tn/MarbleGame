@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 64711071}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 72975810}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 101008471}
   m_Layer: 0
   m_Name: Plane (5)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,7 +778,6 @@ MonoBehaviour:
   yourButton: {fileID: 0}
   yourButton2: {fileID: 0}
   sampleObject: {fileID: 0}
-  triggerKey: 0
   buildCam: {fileID: 963194227}
   marble: {fileID: 6769839046207626035, guid: 4fa65b7007bcec745b29057a7d81bae7, type: 3}
   spawn: {fileID: 378555198}
@@ -943,7 +942,7 @@ GameObject:
   - component: {fileID: 209562230}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,7 +1067,7 @@ GameObject:
   - component: {fileID: 270814124}
   m_Layer: 0
   m_Name: GoalFloor
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1113,7 +1112,7 @@ GameObject:
   - component: {fileID: 279815380}
   m_Layer: 0
   m_Name: Plane (8)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,7 +1302,7 @@ GameObject:
   - component: {fileID: 336451591}
   m_Layer: 0
   m_Name: Plane (5)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1737,7 +1736,7 @@ GameObject:
   - component: {fileID: 468987556}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1778,7 +1777,7 @@ GameObject:
   - component: {fileID: 521892434}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1977,7 +1976,7 @@ GameObject:
   - component: {fileID: 650557031}
   m_Layer: 0
   m_Name: Plane (6)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2200,7 +2199,7 @@ GameObject:
   - component: {fileID: 714477908}
   m_Layer: 0
   m_Name: Plane (7)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2408,7 +2407,7 @@ GameObject:
   - component: {fileID: 793812987}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2564,7 +2563,6 @@ MonoBehaviour:
   yourButton: {fileID: 823774470}
   yourButton2: {fileID: 1033414977}
   sampleObject: {fileID: 0}
-  triggerKey: 0
   buildCam: {fileID: 963194227}
   marble: {fileID: 6769839046207626035, guid: 4fa65b7007bcec745b29057a7d81bae7, type: 3}
   spawn: {fileID: 378555198}
@@ -3219,7 +3217,6 @@ MonoBehaviour:
   yourButton: {fileID: 1033414977}
   yourButton2: {fileID: 823774470}
   sampleObject: {fileID: 0}
-  triggerKey: 0
   buildCam: {fileID: 963194227}
   marble: {fileID: 6769839046207626035, guid: 4fa65b7007bcec745b29057a7d81bae7, type: 3}
   spawn: {fileID: 378555198}
@@ -3331,7 +3328,7 @@ GameObject:
   - component: {fileID: 1047968063}
   m_Layer: 0
   m_Name: Bridge
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4138,7 +4135,7 @@ GameObject:
   - component: {fileID: 1643473374}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4476,7 +4473,7 @@ GameObject:
   - component: {fileID: 1743754955}
   m_Layer: 0
   m_Name: Plane (7)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4930,7 +4927,7 @@ GameObject:
   - component: {fileID: 1984603700}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5059,7 +5056,7 @@ GameObject:
   - component: {fileID: 1986462101}
   m_Layer: 0
   m_Name: Plane (6)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5174,7 +5171,7 @@ GameObject:
   - component: {fileID: 1987028606}
   m_Layer: 0
   m_Name: Plane (9)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5469,7 +5466,7 @@ GameObject:
   - component: {fileID: 2059085235}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5584,7 +5581,7 @@ GameObject:
   - component: {fileID: 2079523718}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5700,7 +5697,7 @@ GameObject:
   - component: {fileID: 2111681341}
   m_Layer: 0
   m_Name: Plane (8)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

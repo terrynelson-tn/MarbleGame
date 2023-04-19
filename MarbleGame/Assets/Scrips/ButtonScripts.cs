@@ -9,7 +9,6 @@ public class ButtonScripts : MonoBehaviour
     public Button yourButton;
     public Button yourButton2;
     public GameObject sampleObject;
-    public KeyCode triggerKey;
     public Camera buildCam;
     public GameObject marble;
     public GameObject spawn;
@@ -19,27 +18,18 @@ public class ButtonScripts : MonoBehaviour
     public GameObject[] Obstacles;
 
 
-    void Awake()
-    {
-        buildCam.gameObject.SetActive(true);
-        yourButton = GetComponent<Button>();
-        spawnPos = spawn.gameObject.transform.position;
+    void Start()
+    { 
+        spawnPos = spawn.transform.position;
+        Debug.Log(spawnPos.x + " " + spawnPos.y + " " + spawnPos.z);
         spawnPos.y += 3;
     }
-
-    void Update()
-    {
-        if(Input.GetKeyDown(triggerKey))
-        {
-            yourButton.onClick.Invoke();
-        }
-    }
-    void TaskOnClick()
+/*    void TaskOnClick()
     {
         Debug.Log("You have clicked the button!");
-    }
+    }*/
 
-    public void AddObject()
+ /*   public void AddObject()
     {
         // Forward vector to see where the camera is facing
         Vector3 camForward = Camera.main.transform.forward;
@@ -94,7 +84,7 @@ public class ButtonScripts : MonoBehaviour
 
         }
             GameObject newSpawn = Instantiate(sampleObject, itemCoords, sampleObject.transform.rotation);
-    }
+    }*/
     public void startGame()
     {
        GameObject newSpawn = Instantiate(marble, spawnPos, marble.transform.rotation);

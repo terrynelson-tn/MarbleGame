@@ -10,4 +10,11 @@ public class DestroyObject : MonoBehaviour
     {
         Destroy(deleteMe, 60f);
     }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Death")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
