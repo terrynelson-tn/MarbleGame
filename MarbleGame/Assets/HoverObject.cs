@@ -10,8 +10,9 @@ public class HoverObject : MonoBehaviour
     //public GameObject planeObject;
     public GameObject objectToCheck;
     public Rigidbody rb;
-
-
+    private GameObject target;
+    
+    
 
     float xMin;
     float xMax;
@@ -19,7 +20,8 @@ public class HoverObject : MonoBehaviour
     float zMax;
     private void Start()
     {
-
+        target = GameObject.FindWithTag("Player");
+        
         Bounds bounds = gameObject.GetComponent<Renderer>().bounds;
         xMin = bounds.min.x;
         xMax = bounds.max.x;
@@ -33,14 +35,11 @@ public class HoverObject : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-
-    }
+    
     void FixedUpdate()
     {
-        Debug.Log("marble z pos:" + rb.transform.position.z);
-        Debug.Log("marble x pos:" + rb.transform.position.x);
+        Debug.Log("marble z pos:" + target.transform.position.z);
+        Debug.Log("marble x pos:" + target.transform.position.x);
         if (rb.transform.position.z > zMin && rb.transform.position.z < zMax && rb.transform.position.x > xMin && rb.transform.position.x < xMax)
         {
             Debug.Log("within bounds");
