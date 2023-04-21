@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38223127, g: 0.4688933, b: 0.61398077, a: 1}
+  m_IndirectSpecularColor: {r: 0.11884108, g: 0.18339348, b: 0.32976314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -925,7 +925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462613788852040626, guid: bb0015514ae6f974abcf3ec8a2e57e0c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2.1646621
       objectReference: {fileID: 0}
     - target: {fileID: 7462613788852040626, guid: bb0015514ae6f974abcf3ec8a2e57e0c, type: 3}
       propertyPath: m_LocalScale.y
@@ -937,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462613788852040626, guid: bb0015514ae6f974abcf3ec8a2e57e0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 7462613788852040626, guid: bb0015514ae6f974abcf3ec8a2e57e0c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1054,6 +1054,56 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: db3e7f1ce5e0dde45a0d1fde53d3fd09, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6c81aa6e05e6bd468af0ef1ae6efc1b, type: 3}
+--- !u!1 &1151918870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151918872}
+  - component: {fileID: 1151918871}
+  m_Layer: 0
+  m_Name: DataPersistenceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1151918871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151918870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551a0b3eea16c24499935f67adbfea0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableDataPersistence: 0
+  initializeDataIfNull: 0
+  overrideSelectedProfileId: 0
+  testSelectedProfileId: testing
+  fileName: GameData.save
+  useEncryption: 0
+--- !u!4 &1151918872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151918870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214819933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,9 +1195,9 @@ MonoBehaviour:
   yourButton: {fileID: 1214819934}
   yourButton2: {fileID: 1578355539}
   sampleObject: {fileID: 0}
-  buildCam: {fileID: 0}
+  buildCam: {fileID: 2070317102}
   marble: {fileID: 6769839046207626035, guid: 4fa65b7007bcec745b29057a7d81bae7, type: 3}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1695803165}
   Obstacles:
   - {fileID: 2092675361}
 --- !u!114 &1214819936
@@ -1503,9 +1553,9 @@ MonoBehaviour:
   yourButton: {fileID: 1578355539}
   yourButton2: {fileID: 1214819934}
   sampleObject: {fileID: 0}
-  buildCam: {fileID: 0}
+  buildCam: {fileID: 2070317102}
   marble: {fileID: 6769839046207626035, guid: 4fa65b7007bcec745b29057a7d81bae7, type: 3}
-  spawn: {fileID: 0}
+  spawn: {fileID: 1695803165}
   Obstacles:
   - {fileID: 2092675361}
 --- !u!114 &1578355539
@@ -1657,7 +1707,7 @@ MonoBehaviour:
   yourButton: {fileID: 0}
   yourButton2: {fileID: 0}
   sampleObject: {fileID: 0}
-  buildCam: {fileID: 0}
+  buildCam: {fileID: 2070317102}
   marble: {fileID: 6769839046207626035, guid: 4fa65b7007bcec745b29057a7d81bae7, type: 3}
   spawn: {fileID: 1695803165}
   Obstacles: []
