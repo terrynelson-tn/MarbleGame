@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,8 @@ public class DragObject : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
-    [SerializeField] private Vector3 gridSize = new Vector3(5, 5, 5);
+    [SerializeField] private Vector3 gridSize = new Vector3(0.5F, 0.5F, 0.5F);
+    public GameObject floorPiece;
     Vector3 mouse;
     // Used to tell if the object is in a movable state
     bool canMove = false;
@@ -60,36 +61,61 @@ public class DragObject : MonoBehaviour
         {
             return;
         }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            this.gameObject.transform.Rotate(0, 5, 0);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            this.gameObject.transform.Rotate(0, -5, 0);
+        }
         var position = new Vector3(0, 0, 0);
         if (Input.GetKey(KeyCode.X))
         {
             mouse = GetMouseWorldPos() + mOffset;
             position = new Vector3(Mathf.RoundToInt(mouse.x / this.gridSize.x) * this.gridSize.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+            if (position.y < floorPiece.transform.position.y)
+            {
+                position.y = floorPiece.transform.position.y + 0.25F;
+            }
             this.transform.position = position;
         }
         else if (Input.GetKey(KeyCode.Y))
         {
             mouse = GetMouseWorldPos() + mOffset;
             position = new Vector3(this.gameObject.transform.position.x, Mathf.RoundToInt(mouse.y / this.gridSize.y) * this.gridSize.y, this.gameObject.transform.position.z);
+            if (position.y < floorPiece.transform.position.y)
+            {
+                position.y = floorPiece.transform.position.y + 0.25F;
+            }
             this.transform.position = position;
         }
         else if (Input.GetKey(KeyCode.Z))
         {
             mouse = GetMouseWorldPos() + mOffset;
             position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, Mathf.RoundToInt(mouse.z / this.gridSize.z) * this.gridSize.z);
+            if (position.y < floorPiece.transform.position.y)
+            {
+                position.y = floorPiece.transform.position.y + 0.25F;
+            }
             this.transform.position = position;
         }
         else if (Input.GetKey(KeyCode.R) && canRotate)
         {
-            this.gameObject.transform.Rotate(0, 0, 90);
+            this.gameObject.transform.Rotate(0, 90, 0);
             canRotate = false;
         }
         else if (!keyedMove)
         {
             transform.position = GetMouseWorldPos() + mOffset;
             position = new Vector3(Mathf.RoundToInt(this.transform.position.x / this.gridSize.x) * this.gridSize.x, (Mathf.RoundToInt(this.transform.position.y / this.gridSize.y) * this.gridSize.y), (Mathf.RoundToInt(this.transform.position.z / this.gridSize.z) * this.gridSize.z));
+            if (position.y < floorPiece.transform.position.y)
+            {
+                position.y = floorPiece.transform.position.y + 0.25F;
+            }
             this.transform.position = position;
 
         }
     }
 }
+*/

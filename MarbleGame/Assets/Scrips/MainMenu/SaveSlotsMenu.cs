@@ -127,7 +127,8 @@ public class SaveSlotsMenu : Menu
             if (profileData == null && isLoadingGame)
             {
                 saveSlot.SetInteractable(false);
-            }else
+            }
+            else
             {
                 saveSlot.SetInteractable(true);
                 if (firstSelected.Equals(backButton.gameObject))
