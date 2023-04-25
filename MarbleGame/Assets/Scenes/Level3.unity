@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8829c9ff700e0e342b0c9a47646afdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatForce: 2
+  floatForce: 60
 --- !u!65 &457184231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1552,7 +1552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8829c9ff700e0e342b0c9a47646afdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatForce: 2
+  floatForce: 60
 --- !u!65 &1412551745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8829c9ff700e0e342b0c9a47646afdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatForce: 2
+  floatForce: 60
 --- !u!1 &1612092831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,11 +2643,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7158202986230916232, guid: cedf71f443a46654fb4e398512fafcab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.26
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 7158202986230916232, guid: cedf71f443a46654fb4e398512fafcab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.1
+      value: -23.12
       objectReference: {fileID: 0}
     - target: {fileID: 7158202986230916232, guid: cedf71f443a46654fb4e398512fafcab, type: 3}
       propertyPath: m_LocalRotation.w
