@@ -10,9 +10,14 @@ public class HoverObject : MonoBehaviour
     //public GameObject planeObject;
     public GameObject objectToCheck;
     public Rigidbody rb;
+<<<<<<< Updated upstream
     private GameObject target;
     
     
+=======
+
+
+>>>>>>> Stashed changes
 
     float xMin;
     float xMax;
@@ -20,8 +25,12 @@ public class HoverObject : MonoBehaviour
     float zMax;
     private void Start()
     {
+<<<<<<< Updated upstream
         target = GameObject.FindWithTag("Player");
         
+=======
+
+>>>>>>> Stashed changes
         Bounds bounds = gameObject.GetComponent<Renderer>().bounds;
         xMin = bounds.min.x;
         xMax = bounds.max.x;
@@ -35,11 +44,22 @@ public class HoverObject : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
     
     void FixedUpdate()
     {
         Debug.Log("marble z pos:" + target.transform.position.z);
         Debug.Log("marble x pos:" + target.transform.position.x);
+=======
+    private void Update()
+    {
+
+    }
+    void FixedUpdate()
+    {
+        Debug.Log("marble z pos:" + rb.transform.position.z);
+        Debug.Log("marble x pos:" + rb.transform.position.x);
+>>>>>>> Stashed changes
         if (rb.transform.position.z > zMin && rb.transform.position.z < zMax && rb.transform.position.x > xMin && rb.transform.position.x < xMax)
         {
             Debug.Log("within bounds");

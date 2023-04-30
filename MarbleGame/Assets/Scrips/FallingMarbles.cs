@@ -11,6 +11,12 @@ public class FallingMarbles : MonoBehaviour
     ArrayList totalMarbles = new ArrayList();
     private GameObject newMarble;
 
+    public float despawnTime = 2f;
+    public float minXRange = -10;
+    public float maxXRange = 11;
+    public float minZRange = -5;
+    public float maxZRange = 11;
+
     private float time = 0.0f;
 
 
@@ -18,7 +24,7 @@ public class FallingMarbles : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        Vector3 randomSpawnPosition = new(Random.Range(-10, 11), transform.position.y, Random.Range(-5, 11));
+        Vector3 randomSpawnPosition = new(Random.Range(transform.position.x + minXRange, transform.position.x + maxXRange), transform.position.y, Random.Range(transform.position.z + minZRange, transform.position.z + maxZRange));
 
         if (time > 0.1f)
         {
@@ -33,7 +39,7 @@ public class FallingMarbles : MonoBehaviour
     IEnumerator MarbleTime()
     {
         MarblePrefab.GetComponent<Renderer>().material = randomMaterial[Random.Range(0, randomMaterial.Length)];
-        Destroy(newMarble, 2f);
+        Destroy(newMarble, despawnTime);
         yield return new WaitForSeconds(3f);
     }
 }
