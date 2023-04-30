@@ -5,6 +5,13 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour
 {
     public GameObject deleteMe;
+    public AudioSource death;
+    public MeshRenderer mesh;
+
+    private void Start()
+    {
+        mesh = this.gameObject.GetComponent<MeshRenderer>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -14,7 +21,9 @@ public class DestroyObject : MonoBehaviour
     {
         if(collision.gameObject.tag == "Death")
         {
-            Destroy(this.gameObject);
+            mesh.enabled = false;
+            death.PlayOneShot(death.clip, 1);
+            Destroy(this.gameObject, 2f);
         }
     }
 }
