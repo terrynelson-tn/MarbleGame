@@ -16,7 +16,6 @@ public class ButtonScripts : MonoBehaviour
     bool horizPressed = false;
     bool vertPressed = false;
     public GameObject[] Obstacles;
-    public GameObject newSpawn;
 
 
     void Start()
@@ -88,7 +87,7 @@ public class ButtonScripts : MonoBehaviour
     }*/
     public void startGame()
     {
-       newSpawn = Instantiate(marble, spawnPos, marble.transform.rotation);
+       GameObject newSpawn = Instantiate(marble, spawnPos, marble.transform.rotation);
     }
 
     public void moveHorizontal()

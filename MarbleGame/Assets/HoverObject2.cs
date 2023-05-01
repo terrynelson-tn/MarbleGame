@@ -14,7 +14,7 @@ public class HoverObject2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (hover)
             rb.AddForce(Vector3.up * floatForce);
