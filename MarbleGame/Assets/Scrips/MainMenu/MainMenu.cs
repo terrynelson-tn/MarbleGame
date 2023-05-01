@@ -22,6 +22,7 @@ public class MainMenu : Menu
     [SerializeField] private Button continueGameButton;
     [SerializeField] private Button loadGameButton;
     [SerializeField] private Button exitGameButton;
+    [SerializeField] private Button creditsButton;
 
     private void Start()
     {
@@ -66,6 +67,12 @@ public class MainMenu : Menu
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+    public void OnCreditsClicked()
+    {
+        SceneManager.LoadSceneAsync("End");
+    }
+
 
     private void DisableMenuButtons()
     {
